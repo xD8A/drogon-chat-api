@@ -66,3 +66,4 @@ target_sources(${PROJECT_NAME}
 # ##############################################################################
 # uncomment the following line for dynamically loading views 
 # set_property(TARGET ${PROJECT_NAME} PROPERTY ENABLE_EXPORTS ON)
+configure_file(config.json config.json COPYONLY)

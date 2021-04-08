@@ -68,3 +68,15 @@ target_sources(${PROJECT_NAME}
 # set_property(TARGET ${PROJECT_NAME} PROPERTY ENABLE_EXPORTS ON)
 configure_file(config.json config.json COPYONLY)
 configure_file(app.db app.db COPYONLY)
+
+add_subdirectory(libs/libbcrypt)
+target_link_libraries(${PROJECT_NAME} PRIVATE bcrypt)
+target_include_directories(${PROJECT_NAME}
+        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/libs/libbcrypt/include)
+
+add_subdirectory(libs/jwt-cpp)
+target_link_libraries(${PROJECT_NAME} PRIVATE jwt-cpp)
+target_include_directories(${PROJECT_NAME}
+        PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/libs/jwt-cpp/include)

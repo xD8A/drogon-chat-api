@@ -1,0 +1,9 @@
+[submodule "libs/jwt-cpp"]
+	path = libs/drogon
+	url = https://github.com/xD8A/drogon.git
+[submodule "libs/libbcrypt"]
+	path = libs/libbcrypt
+	url = https://github.com/trusch/libbcrypt.git
+[submodule "libs/jwt-cpp"]
+	path = libs/jwt-cpp
+	url = https://github.com/Thalhammer/jwt-cpp.git

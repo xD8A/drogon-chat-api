@@ -1,4 +1,4 @@
-*.h
-*.cc
+#*.h
+#*.cc
 !*Ext.h
 !*Ext.cc
